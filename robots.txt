@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-User-agent: *
-Allow: /
 
 Sitemap: https://maadvertising.maadvertising329.workers.dev/sitemap.xml
