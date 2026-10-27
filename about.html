@@ -45,6 +45,89 @@
   <!-- Website CSS -->
   <link rel="stylesheet" href="style.css">
 
+  <!-- About Hero Image CSS -->
+  <style>
+    .about-hero {
+      padding-top: 35px;
+      padding-bottom: 55px;
+      overflow: hidden;
+    }
+
+    .about-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 45px;
+    }
+
+    .about-hero-image {
+      width: 100%;
+      min-width: 0;
+      aspect-ratio: 7 / 5;
+      overflow: hidden;
+      border-radius: 22px;
+      background: #f3eee9;
+    }
+
+    .about-hero-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .about-hero-content {
+      min-width: 0;
+    }
+
+    .about-hero-content .breadcrumb {
+      margin-bottom: 22px;
+    }
+
+    .about-hero-content h1 {
+      font-size: clamp(36px, 4vw, 58px);
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      margin: 12px 0 20px;
+    }
+
+    .about-hero-content > p:not(.eyebrow) {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 24px;
+      max-width: 520px;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .about-hero {
+        padding-top: 25px;
+        padding-bottom: 35px;
+      }
+
+      .about-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .about-hero-image {
+        aspect-ratio: 4 / 3;
+        border-radius: 16px;
+      }
+
+      .about-hero-content h1 {
+        font-size: 36px;
+        letter-spacing: -0.8px;
+      }
+
+      .about-hero-content > p:not(.eyebrow) {
+        font-size: 16px;
+        line-height: 1.7;
+      }
+    }
+  </style>
+
   <!-- Add canonical URL after connecting your domain -->
 
 </head>
@@ -81,26 +164,42 @@
 
   <main>
 
-    <!-- About Page Hero -->
-    <section class="page-hero">
-      <div class="container">
+    <!-- About Page Hero - Image Left, Text Right -->
+    <section class="page-hero about-hero">
+      <div class="container about-hero-grid">
 
-        <div class="breadcrumb">
-          <a href="index.html">Home</a> / About Us
+        <!-- Left Side Image -->
+        <div class="about-hero-image">
+          <img
+            src="images/about-hero.jpg"
+            alt="MA Advertising custom signage, LED sign boards and business branding"
+            width="700"
+            height="500"
+            fetchpriority="high"
+          >
         </div>
 
-        <p class="eyebrow">About MA Advertising</p>
+        <!-- Right Side Content -->
+        <div class="about-hero-content">
 
-        <h1>Signage designed around your business.</h1>
+          <div class="breadcrumb">
+            <a href="index.html">Home</a> / About Us
+          </div>
 
-        <p>
-          We help businesses present their brand clearly with custom signage
-          planned around their location, identity and customers.
-        </p>
+          <p class="eyebrow">About MA Advertising</p>
 
-        <a class="btn" href="contact.html#contact">
-          Discuss Your Project →
-        </a>
+          <h1>Signage designed around your business.</h1>
+
+          <p>
+            We help businesses present their brand clearly with custom signage
+            planned around their location, identity and customers.
+          </p>
+
+          <a class="btn" href="contact.html#contact">
+            Discuss Your Project →
+          </a>
+
+        </div>
 
       </div>
     </section>
